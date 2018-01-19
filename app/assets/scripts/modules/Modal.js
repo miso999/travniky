@@ -1,5 +1,5 @@
 // import $ from 'jquery';
-
+j
 class Modal {
     constructor() {
         this.openModalButton = $('.open-modal');
