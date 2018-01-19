@@ -11276,17 +11276,20 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _jquery = __webpack_require__(0);
 
-// import $ from 'jquery';
-j;
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Modal = function () {
     function Modal() {
         _classCallCheck(this, Modal);
 
-        this.openModalButton = $('.open-modal');
-        this.closeButton = $('.modal__close');
+        this.openModalButton = (0, _jquery2.default)('.open-modal');
+        this.closeButton = (0, _jquery2.default)('.modal__close');
         this.events();
     }
 
@@ -11300,26 +11303,26 @@ var Modal = function () {
             this.closeButton.click(this.closeModal);
 
             // pushes any key
-            $(document).keyup(this.keyPressHandler.bind(this));
+            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
         }
     }, {
         key: 'keyPressHandler',
         value: function keyPressHandler(e) {
             if (e.keyCode == 27) {
-                $('.modal').removeClass('modal--show');
+                (0, _jquery2.default)('.modal').removeClass('modal--show');
             }
         }
     }, {
         key: 'openModal',
         value: function openModal() {
-            var modal_id = $(this).attr('data-modal-id');
-            $('#' + modal_id).addClass('modal--show');
+            var modal_id = (0, _jquery2.default)(this).attr('data-modal-id');
+            (0, _jquery2.default)('#' + modal_id).addClass('modal--show');
             return false;
         }
     }, {
         key: 'closeModal',
         value: function closeModal() {
-            var modal = $(this).closest('.modal');
+            var modal = (0, _jquery2.default)(this).closest('.modal');
             modal.removeClass('modal--show');
         }
     }]);
