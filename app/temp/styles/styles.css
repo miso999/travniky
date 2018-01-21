@@ -467,6 +467,10 @@ hr.left {
 }
   }
 
+.img-responsive {
+  width:100%;
+}
+
 .large-hero {
   position: relative;
 
