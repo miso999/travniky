@@ -10830,7 +10830,7 @@ var StickyHeader = function () {
         this.pageSection = (0, _jquery2.default)('.page-section , .large-hero');
         this.navLinks = (0, _jquery2.default)('.primary-nav a');
         this.sectionWaypoint();
-        this.addSmoothScroll();
+        this.addSmoothScroll({});
         this.refreshWaypoints();
     }
 
@@ -10844,7 +10844,8 @@ var StickyHeader = function () {
     }, {
         key: 'addSmoothScroll',
         value: function addSmoothScroll() {
-            this.navLinks.smoothScroll();
+            // this.navLinks.smoothScroll({offset: -300});
+            (0, _jquery2.default)('a').smoothScroll({ offset: -62 });
         }
     }, {
         key: 'fixOnScroll',

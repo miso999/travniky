@@ -12,7 +12,7 @@
   }
 
   &--blue {
-    color: $mainBlue;
+    color: $mainColor;
   }
 
   &--less-margin {

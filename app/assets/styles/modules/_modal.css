@@ -29,7 +29,7 @@
     right: 15px;
     top: 15px;
     font-size:2rem;
-    color: $mainBlue;
+    color: $mainColor;
     transform: scaleX(1.2);
     transform-origin: 100% 0;
     cursor: pointer;

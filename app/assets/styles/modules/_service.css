@@ -1,11 +1,11 @@
-.testimonial {
+.service {
   background-color: rgba(255, 255, 255, .8);
-  padding: 0 18px 1px 18px;
-  margin-bottom: 98px;
+  padding: 17px 18px 12px 18px;
+  margin-bottom: 30px;
 
   @mixin atLarge {
-    margin-bottom: 0;
-    padding: 0 1.8125rem 1px 1.8125rem;
+    margin-bottom: 40px;
+    padding: 17px 18px 12px 18px;
   }
 
   &--last {
@@ -13,14 +13,13 @@
   }
 
   &__photo {
-    border-radius: 80px;
-    overflow: hidden;
-    width: 160px;
-    height: 160px;
-    margin: 0 auto -80px auto;
+    width: 100%;
     position: relative;
-    top: -80px;
-    border: 6px solid rgba(255, 255, 255, .8);
+    border-radius: 20px 20px 20px 0;
+  }
+
+  &__content {
+
   }
 
   &__title {

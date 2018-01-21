@@ -2,7 +2,7 @@
   padding: 1.2rem 0;
 
   @mixin atMedium {
-    padding: 4.5rem 0;
+    padding: 2.5rem 0;
   }
 
   &--no-b-padding-until-medium {
@@ -21,9 +21,8 @@
     }
   }
 
-  &--blue {
-    background-color: $mainBlue;
-    color: #FFF;
+  &--stripe {
+    background-color: $stripeColor;
   }
 
   &--testimonials {
@@ -36,5 +35,7 @@
       }
     }
   }
+
+
 
 }

@@ -10,7 +10,7 @@ class StickyHeader {
         this.pageSection = $('.page-section , .large-hero');
         this.navLinks = $('.primary-nav a');
         this.sectionWaypoint();
-        this.addSmoothScroll();
+        this.addSmoothScroll({});
         this.refreshWaypoints();
     }
 
@@ -21,7 +21,8 @@ class StickyHeader {
     }
 
     addSmoothScroll() {
-        this.navLinks.smoothScroll();
+        // this.navLinks.smoothScroll({offset: -300});
+        $('a').smoothScroll({offset: -62});
     }
 
     fixOnScroll() {

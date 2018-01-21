@@ -235,7 +235,7 @@ samp {
  */
 
 figure {
-  margin: 1em 40px;
+  margin: 1em 2.5rem;
 }
 
 /**
@@ -328,7 +328,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0.0625rem dotted ButtonText;
 }
 
 /**
@@ -336,8 +336,8 @@ button:-moz-focusring,
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
+  border: 0.0625rem solid #c0c0c0;
+  margin: 0 0.125rem;
   padding: 0.35em 0.625em 0.75em;
 }
 
@@ -394,7 +394,7 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  outline-offset: -0.125rem; /* 2 */
 }
 
 /**
@@ -426,7 +426,8 @@ textarea {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
   color: #333;
 }
 
@@ -444,18 +445,76 @@ a {
   color: #d59541;
 }
 
-.large-hero {
-  border-bottom: 10px solid #2f5572;
+hr {
+  height: 0.125rem;
+  width: 4.375rem;
+  text-align: center;
   position: relative;
+  background: #d59541;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  border: 0;
+}
+
+hr.left {
+    margin-left: 0;
+  }
+
+@media (max-width: 48rem) {
+
+.hidden-xs {
+    display: none !important
+}
+  }
+
+.large-hero {
+  position: relative;
+
+
+
 
 }
 
+.large-hero .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    display: block;
+    background: rgba(0, 0, 0, .6);
+  }
+
+@media (min-width: 50rem) {
+
+.large-hero {
+    height:43.75rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2)
+
+
+
+
+}
+  }
+
 .large-hero__image {
     display: block;
+    width: 100%;
+  }
+
+.large-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .2);
+    width: 100%;
+    height: 100%;
   }
 
 .large-hero__text-content {
-    padding-top: 88px;
+    padding-top: 1.75rem;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -463,43 +522,30 @@ a {
     left: 0;
     width: 100%;
     text-align: center;
+    background: rgba(6,82,15, .15);
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .large-hero__text-content {
-      padding-top: 60px
+      padding-top: 1.25rem
   }
   }
 
 .large-hero__title {
-    font-weight: 300;
-    color: #2f5572;
+    font-weight: 700;
+    color: #fff;
     margin: 0;
-    font-size: 2.4rem;
+    font-size: 1.8125rem;
+    letter-spacing: -0.0625rem;
+    text-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, .1);
 
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .large-hero__title {
-      font-size: 4.8rem
-
-  }
-  }
-
-.large-hero__subtitle {
-    font-weight: 300;
-    color: #2f5572;
-    font-size: 1.5rem;
-    margin: 0;
-
-  }
-
-@media (min-width: 530px) {
-
-.large-hero__subtitle {
-      font-size: 2.9rem
+      font-size: 4rem
 
   }
   }
@@ -507,22 +553,52 @@ a {
 .large-hero__description {
     color: #FFF;
     font-size: 1.1rem;
-    font-weight: 100;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-    max-width: 30rem;
+    font-weight: 300;
+    text-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, .2);
+    max-width: 43.75rem;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0.3125rem;
+    letter-spacing: 0.125rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .large-hero__description {
-      font-size: 1.875rem
+      font-size: 1.125rem
   }
   }
 
+.large-hero__effect {
+    position: absolute;
+    overflow: hidden;
+    height: 5.625rem;
+    z-index: 1;
+    bottom: 0;
+    left:0;
+    width:100%;
+  }
+
+.large-hero__effect  span {
+      width: 55%;
+      height: 5.625rem;
+      position: absolute;
+      left: -0.625rem;
+      bottom: 0;
+      background: #ffffff;
+      -webkit-transform: rotate(3deg) translate(0.1875rem, 2.8125rem);
+              transform: rotate(3deg) translate(0.1875rem, 2.8125rem);
+    }
+
+.large-hero__effect  span:last-child {
+        left: auto;
+        right: -0.625rem;
+        -webkit-transform: rotate(-3deg) translate(-0.1875rem, 2.8125rem);
+                transform: rotate(-3deg) translate(-0.1875rem, 2.8125rem);
+      }
+
 .btn {
-  background-color: #2f5572;
+  background-color: #06520f;
   color: #FFF;
   text-decoration: none;
   padding: .75rem 1.2rem;
@@ -538,7 +614,7 @@ a {
     padding: 1.1rem 1.9rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .btn--large {
       font-size: 1.25rem
@@ -547,20 +623,20 @@ a {
 
 .wrapper {
   overflow: hidden;
-  padding-left: 18px;
-  padding-right: 18px;
-  max-width: 1236px;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  max-width: 77.25rem;
   margin-left: auto;
   margin-right: auto;
 
 }
 
 .wrapper--medium {
-    max-width: 976px;
+    max-width: 61rem;
   }
 
 .wrapper--narrow {
-    max-width:460px;
+    max-width:28.75rem;
   }
 
 .wrapper--no-padding-until-medium {
@@ -568,11 +644,11 @@ a {
     padding-right: 0;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .wrapper--no-padding-until-medium {
-      padding-left: 18px;
-      padding-right: 18px
+      padding-left: 1.125rem;
+      padding-right: 1.125rem
   }
   }
 
@@ -581,11 +657,11 @@ a {
     padding-right: 0;
   }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
 
 .wrapper--no-padding-until-large {
-      padding-left: 18px;
-      padding-right: 18px
+      padding-left: 1.125rem;
+      padding-right: 1.125rem
   }
   }
 
@@ -598,7 +674,7 @@ a {
     margin-bottom: 1rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .wrapper--b-margin {
       margin-bottom: 3.875rem
@@ -608,12 +684,16 @@ a {
 .page-section {
   padding: 1.2rem 0;
 
+
+
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .page-section {
-    padding: 4.5rem 0
+    padding: 2.5rem 0
+
+
 
 }
   }
@@ -622,7 +702,7 @@ a {
     padding-bottom: 0;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .page-section--no-b-padding-until-medium {
       padding-bottom: 4.5rem
@@ -633,23 +713,22 @@ a {
     padding-bottom: 0;
   }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
 
 .page-section--no-b-padding-until-large {
       padding-bottom: 4.5rem
   }
   }
 
-.page-section--blue {
-    background-color: #2f5572;
-    color: #FFF;
+.page-section--stripe {
+    background-color: #f6f6f6;
   }
 
 .page-section--testimonials {
     background-color: #e0e6ef;
   }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
       .page-section--testimonials.lazyloaded {
         background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
         background-size: cover;
@@ -659,10 +738,10 @@ a {
 .headline {
   font-size: 1.9rem;
   font-weight: 300;
-  color: #2f5572;
+  color: #06520f;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .headline {
     font-size: 2.875rem
@@ -681,7 +760,7 @@ a {
     font-size: 1.2rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .headline--small {
       font-size: 1.875rem
@@ -689,7 +768,7 @@ a {
   }
 
 .headline--narrow {
-    max-width: 500px;
+    max-width: 31.25rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -721,38 +800,38 @@ a {
   }
 
 .row--t-padding {
-    padding-top: 80px;
+    padding-top: 2.5rem;
   }
 
 .row--gutters {
-    margin-right: -65px;
+    margin-right: -4.0625rem;
   }
 
 .row--gutters-large {
-    margin-right: -100px;
+    margin-right: -6.25rem;
   }
 
 .row--gutters-small {
-    margin-right: -45px;
+    margin-right: -2.8125rem;
   }
 
 .row--gutters > div {
-    padding-right: 65px;
+    padding-right: 4.0625rem;
   }
 
 .row--gutters-large > div {
-    padding-right: 100px;
+    padding-right: 6.25rem;
   }
 
 .row--gutters-small > div {
-    padding-right: 45px;
+    padding-right: 2.8125rem;
   }
 
 .row__b-margin-until-medium {
     margin-bottom: 1rem;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
     .row__b-margin-until-medium {
       margin-bottom: 0;
@@ -782,7 +861,7 @@ a {
     }
   }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
 
     .row__b-margin-until-large {
       margin-bottom: 0;
@@ -814,7 +893,7 @@ a {
 
 /* Begin Equal Height Rules */
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .flexbox .row--equal-height-at-medium {
       display: -webkit-box;
@@ -831,7 +910,7 @@ a {
       display: flex;
     }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
 
 .flexbox .row--equal-height-at-large {
       display: -webkit-box;
@@ -854,7 +933,7 @@ a {
     margin: 0 0 1.8rem 0;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .generic-content-container p {
       font-size: 1.125rem
@@ -872,7 +951,7 @@ a {
 
 }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .section-title {
     font-size: 3.75rem
@@ -885,7 +964,7 @@ a {
   }
 
 .section-title--blue {
-    color: #2f5572;
+    color: #06520f;
   }
 
 .section-title--less-margin {
@@ -900,11 +979,11 @@ a {
     margin-bottom: .6rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .section-title__icon {
       position: relative;
-      top: 8px;
+      top: 0.5rem;
       margin-right: .5rem;
       margin-left: 0;
       margin-bottom: 0;
@@ -917,10 +996,10 @@ a {
   padding-bottom: 2.5rem;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .feature-item {
-    padding-left: 94px
+    padding-left: 5.875rem
 }
   }
 
@@ -929,7 +1008,7 @@ a {
     margin: 0 auto;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .feature-item__icon {
       position: absolute;
@@ -945,7 +1024,7 @@ a {
     text-align: center;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .feature-item__title {
       text-align: left;
@@ -956,15 +1035,15 @@ a {
 
 .testimonial {
   background-color: rgba(255, 255, 255, .8);
-  padding: 0 18px 1px 18px;
-  margin-bottom: 98px;
+  padding: 0 1.125rem 0.0625rem 1.125rem;
+  margin-bottom: 6.125rem;
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 63.125rem) {
 
 .testimonial {
     margin-bottom: 0;
-    padding: 0 1.8125rem 1px 1.8125rem
+    padding: 0 1.8125rem 0.0625rem 1.8125rem
 }
   }
 
@@ -973,18 +1052,18 @@ a {
   }
 
 .testimonial__photo {
-    border-radius: 80px;
+    border-radius: 5rem;
     overflow: hidden;
-    width: 160px;
-    height: 160px;
-    margin: 0 auto -80px auto;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto -5rem auto;
     position: relative;
-    top: -80px;
-    border: 6px solid rgba(255, 255, 255, .8);
+    top: -5rem;
+    border: 0.375rem solid rgba(255, 255, 255, .8);
   }
 
 .testimonial__title {
-    color: #2f5572;
+    color: #06520f;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -1003,87 +1082,93 @@ a {
 Instead edit gulp/templates/sprite */
 
 .icon {
-      background-image: url('/assets/images/sprites/sprite-e79e95cc.svg');
+      background-image: url('/temp/sprite/css/sprite-e8f37df9.svg');
     }
 
 .no-svg .icon {
-      background-image: url('/assets/images/sprites/sprite-e79e95cc.png');
+      background-image: url('/temp/sprite/css/sprite-e8f37df9.png');
     }
 
 .icon--clear-view-escapes {
-    width: 144.4px;
-    height: 61.53px;
-    background-position: 0 0;
+    width: 144.0.25rem;
+    height: 61.3.3125rem;
+    background-position: 0 50.34386658875354%;
   }
 
 .icon--comment {
-    width: 66px;
-    height: 66px;
-    background-position: 99.71014492753623% 0;
+    width: 4.125rem;
+    height: 4.125rem;
+    background-position: 70.72243346007605% 79.60091743119266%;
   }
 
 .icon--facebook {
-    width: 23.23px;
-    height: 44.01px;
-    background-position: 26.424310365536293% 45.92133741323979%;
+    width: 23.1.4375rem;
+    height: 44.0.0625rem;
+    background-position: 68.80988978644079% 46.66861119213301%;
   }
 
 .icon--fire {
-    width: 58px;
-    height: 66px;
-    background-position: 0 99.58035714285714%;
+    width: 3.625rem;
+    height: 4.125rem;
+    background-position: 22.878228782287824% 79.60091743119266%;
   }
 
 .icon--globe {
-    width: 66px;
-    height: 66px;
-    background-position: 28.019323671497585% 99.58035714285714%;
+    width: 4.125rem;
+    height: 4.125rem;
+    background-position: 45.627376425855516% 79.60091743119266%;
   }
 
 .icon--instagram {
-    width: 44.01px;
-    height: 44.01px;
-    background-position: 63.059522249879905% 49.25740726919919%;
+    width: 44.0.0625rem;
+    height: 44.0.0625rem;
+    background-position: 92.28393978736096% 73.36139005791908%;
   }
 
 .icon--mail {
-    width: 66px;
-    height: 50px;
-    background-position: 0 48.0703125%;
+    width: 4.125rem;
+    height: 3.125rem;
+    background-position: 54.90494296577947% 47.863247863247864%;
   }
 
 .icon--rain {
-    width: 66px;
-    height: 66px;
-    background-position: 99.71014492753623% 58.92857142857143%;
+    width: 4.125rem;
+    height: 4.125rem;
+    background-position: 100% 0;
   }
 
 .icon--star {
-    width: 66px;
-    height: 66px;
-    background-position: 59.90338164251208% 99.58035714285714%;
+    width: 4.125rem;
+    height: 4.125rem;
+    background-position: 100% 30.275229357798164%;
+  }
+
+.icon--travniky {
+    width: 16.4375rem;
+    height: 7rem;
+    background-position: 0 0;
   }
 
 .icon--twitter {
-    width: 53.78px;
-    height: 44.06px;
-    background-position: 94.15199343125627% 98.55159026429745%;
+    width: 53.4.875rem;
+    height: 44.0.375rem;
+    background-position: 95.55991570380058% 55.01375343835959%;
   }
 
 .icon--wifi {
-    width: 62px;
-    height: 66px;
-    background-position: 68.43601895734596% 0;
+    width: 3.875rem;
+    height: 4.125rem;
+    background-position: 0 79.60091743119266%;
   }
 
 .icon--youtube {
-    width: 36.75px;
-    height: 44px;
-    background-position: 37.76931216931217% 45.917910447761194%;
+    width: 36.4.6875rem;
+    height: 2.75rem;
+    background-position: 0 99.80416666666666%;
   }
 
 .site-footer {
-  background-color: #2f5572;
+  background-color: #06520f;
   color: #FFF;
   padding: .5rem 0;
   text-align: center;
@@ -1095,7 +1180,7 @@ Instead edit gulp/templates/sprite */
     font-weight: 200;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-footer__text {
       display: inline;
@@ -1105,7 +1190,7 @@ Instead edit gulp/templates/sprite */
   }
 
 .site-header {
-  padding: 10px 0;
+  padding: 0.625rem 0;
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -1114,24 +1199,24 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header--expanded {
-    background-color: rgba(47,85,114, .8);
+    background-color: rgba(6,82,15, .9);
     z-index: 5;
 
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-header {
-    background-color: rgba(47,85,114, .3);
+    background-color: rgba(6,82,15, .0);
     position: fixed
 }
 
     .site-header--dark {
-      background-color: rgba(47,85,114, .9);
+      background-color: rgba(6,82,15, .9);
     }
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-header__btn-container {
       float: right
@@ -1142,46 +1227,46 @@ Instead edit gulp/templates/sprite */
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%) scale(.8);
-            transform: translateX(-50%) scale(.8);
+    -webkit-transform: translateX(-50%) scale(.3);
+            transform: translateX(-50%) scale(.3);
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    background-color: #2f5572;
-    padding: 25px 36px;
+    background-color: #06520f;
+    padding: 1.5625rem 2.25rem;
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out;
     transition: transform .3s ease-out, -webkit-transform .3s ease-out;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-header__logo {
       left: auto;
-      -webkit-transform: translateX(0);
-              transform: translateX(0)
+      -webkit-transform: translateX(0) scale(.6);
+              transform: translateX(0) scale(.6)
   }
 
       .site-header--dark .site-header__logo {
-        -webkit-transform: scale(.56);
-                transform: scale(.56);
+        -webkit-transform: scale(.38);
+                transform: scale(.38);
       }
   }
 
 .site-header__logo__graphic {
-    text-indent: -9999px;
+    text-indent: -624.9375rem;
   }
 
 .site-header__menu-icon {
-    width: 20px;
-    height: 19px;
+    width: 1.25rem;
+    height: 1.1875rem;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
     z-index: 10;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-header__menu-icon {
       display: none
@@ -1192,7 +1277,7 @@ Instead edit gulp/templates/sprite */
       content: '';
       background-color: #fff;
       width:100%;
-      height:3px;
+      height:0.1875rem;
       position: absolute;
       top: 0;
       left:0;
@@ -1205,11 +1290,11 @@ Instead edit gulp/templates/sprite */
 
 .site-header__menu-icon__middle {
       position: absolute;
-      top: 8px;
+      top: 0.5rem;
       left:0;
       background-color: #fff;
       width:100%;
-      height:3px;
+      height:0.1875rem;
       -webkit-transform-origin: 0 50%;
               transform-origin: 0 50%;
       -webkit-transition: all .3s ease-out;
@@ -1220,7 +1305,7 @@ Instead edit gulp/templates/sprite */
       content: '';
       background-color: #fff;
       width:100%;
-      height:3px;
+      height:0.1875rem;
       position: absolute;
       bottom: 0;
       left:0;
@@ -1247,14 +1332,14 @@ Instead edit gulp/templates/sprite */
 
 .site-header__menu-icon--close::after {
 
-        -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(0.0625rem);
 
-                transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+                transform: rotate(-45deg) scaleX(1.25) translateY(0.0625rem);
 
       }
 
 .site-header__menu-content {
-    padding-top: 90px;
+    padding-top: 5.625rem;
     opacity: 0;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
@@ -1265,7 +1350,7 @@ Instead edit gulp/templates/sprite */
             transform: scale(1);
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .site-header__menu-content {
       padding-top: 0;
@@ -1285,17 +1370,17 @@ Instead edit gulp/templates/sprite */
 
 .primary-nav {
 
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .primary-nav {
     padding-top: 0
 }
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .primary-nav--pull-right {
       float: right
@@ -1316,15 +1401,15 @@ Instead edit gulp/templates/sprite */
 .primary-nav li {
     list-style: none;
     display: inline-block;
-    padding-right: 12px;
+    padding-right: 0.75rem;
 
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .primary-nav li {
       float: left;
-      padding-right: 20px;
+      padding-right: 1.25rem;
       display: block
 
   }
@@ -1334,28 +1419,31 @@ Instead edit gulp/templates/sprite */
     padding-right: 0;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .primary-nav li:last-child {
-      padding-right: 20px
+      padding-right: 1.25rem
   }
   }
 
 .primary-nav a {
-    background-color: rgba(47,85,114, 1);
+    background-color: rgba(6,82,15, 1);
     font-size: .8rem;
     color: #FFF;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
     display: block;
-    padding: 5px 8px;
+    padding: 0.3125rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    outline: 0;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
 
 .primary-nav a {
       background-color: transparent;
-      padding: 12px 0;
+      padding: 0.75rem 0.75rem;
       font-size: 1rem
   }
 
@@ -1409,10 +1497,10 @@ Instead edit gulp/templates/sprite */
 
 .modal__close {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 0.9375rem;
+    top: 0.9375rem;
     font-size:2rem;
-    color: #2f5572;
+    color: #06520f;
     -webkit-transform: scaleX(1.2);
             transform: scaleX(1.2);
     -webkit-transform-origin: 100% 0;
@@ -1437,16 +1525,16 @@ Instead edit gulp/templates/sprite */
     background: #d59541;
     display: inline-block;
     width:33%;
-    height: 72px;
+    height: 4.5rem;
     position: relative;
-    margin-bottom:0 5px 5px 5px;
+    margin-bottom:0 0.3125rem 0.3125rem 0.3125rem;
   }
 
-@media (min-width: 530px) {
+@media (min-width: 33.125rem) {
 
 .social-icons__icon {
-      width: 72px;
-      margin: 0 5px
+      width: 4.5rem;
+      margin: 0 0.3125rem
   }
   }
 
@@ -1458,3 +1546,47 @@ Instead edit gulp/templates/sprite */
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
+
+.service {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 1.0625rem 1.125rem 0.75rem 1.125rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 63.125rem) {
+
+.service {
+    margin-bottom: 2.5rem;
+    padding: 1.0625rem 1.125rem 0.75rem 1.125rem
+}
+  }
+
+.service--last {
+    margin-bottom: 0;
+  }
+
+.service__photo {
+    width: 100%;
+    position: relative;
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+  }
+
+.service__content {
+
+  }
+
+.service__title {
+    color: #06520f;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+.service__subtitle {
+    color: #d59541;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: .25rem 0 1rem 0;
+  }

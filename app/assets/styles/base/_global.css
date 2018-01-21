@@ -1,7 +1,9 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
   color: #333;
 }
+
 
 img {
   max-width: 100%;
@@ -14,4 +16,19 @@ img {
 
 a {
   color: $mainOrange;
+}
+
+hr {
+  height: 2px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: $mainOrange;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 0;
+
+  &.left {
+    margin-left: 0;
+  }
 }

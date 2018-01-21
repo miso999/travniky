@@ -11058,6 +11058,12 @@
         }
       }
     },
+    "postcss-pixels-to-rem": {
+      "version": "0.8.0",
+      "resolved": "https://registry.npmjs.org/postcss-pixels-to-rem/-/postcss-pixels-to-rem-0.8.0.tgz",
+      "integrity": "sha1-SN5QCGLTT4kSbxI8NPDSRxNfVBs=",
+      "dev": true
+    },
     "postcss-reduce-idents": {
       "version": "2.4.0",
       "resolved": "https://registry.npmjs.org/postcss-reduce-idents/-/postcss-reduce-idents-2.4.0.tgz",
