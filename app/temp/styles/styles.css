@@ -841,6 +841,12 @@ hr.left {
       margin-bottom: 0;
     }
 
+    .row__medium-3 {
+      float: left;
+      width: 25%;
+    }
+
+
     .row__medium-4 {
       float: left;
       width: 33.33%;
@@ -952,6 +958,7 @@ hr.left {
   font-size: 2.55rem;
   font-weight: 300;
   text-align: center;
+  margin-bottom:1.25rem;
 
 }
 
@@ -1594,3 +1601,33 @@ Instead edit gulp/templates/sprite */
     font-size: 0.9375rem;
     margin: .25rem 0 1rem 0;
   }
+
+.products {
+
+  text-align: center;
+  margin: 0 auto;
+}
+
+.products__list {
+    border-bottom: 0.1875rem dashed #ccc;
+    margin-bottom: 1.875rem;
+  }
+
+.products__list li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 1.25rem;
+    }
+
+.products__list li a {
+        color: #555;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 0.625rem 1rem;
+        border: 0;
+        border-radius: 0.1875rem;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+        text-decoration: none;
+
+      }

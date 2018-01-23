@@ -9911,6 +9911,10 @@ var _Modal = __webpack_require__(7);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
+var _TabSwticher = __webpack_require__(8);
+
+var _TabSwticher2 = _interopRequireDefault(_TabSwticher);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
@@ -9918,6 +9922,7 @@ new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '80%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '70%');
 var stickyHeader = new _StickyHeader2.default();
 new _Modal2.default();
+new _TabSwticher2.default();
 
 /***/ }),
 /* 2 */
@@ -11332,6 +11337,33 @@ var Modal = function () {
 }();
 
 exports.default = Modal;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TabSwitcher = function TabSwitcher() {
+    _classCallCheck(this, TabSwitcher);
+
+    alert('test');
+};
+
+exports.default = TabSwitcher;
 
 /***/ })
 /******/ ]);
