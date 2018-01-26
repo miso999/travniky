@@ -11349,6 +11349,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11357,11 +11359,40 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var TabSwitcher = function TabSwitcher() {
-    _classCallCheck(this, TabSwitcher);
+var TabSwitcher = function () {
+    function TabSwitcher() {
+        _classCallCheck(this, TabSwitcher);
 
-    alert('test');
-};
+        this.links = (0, _jquery2.default)('.tabswitcher__menu li a');
+        this.tabs = (0, _jquery2.default)('.tabswitcher__tab');
+        this.activeTabClass = 'tabswitcher__tab--active';
+        this.activeLinkClass = 'active';
+        this.linkDataAttribute = 'data-tab-name';
+        this.events();
+    }
+
+    _createClass(TabSwitcher, [{
+        key: 'events',
+        value: function events() {
+            var _this = this;
+
+            (0, _jquery2.default)(this.links).on("click", function (e) {
+                _this.switchTab((0, _jquery2.default)(e.target));
+            });
+        }
+    }, {
+        key: 'switchTab',
+        value: function switchTab(e) {
+            var id = (0, _jquery2.default)(e).attr(this.linkDataAttribute);
+            this.links.removeClass(this.activeLinkClass);
+            (0, _jquery2.default)(e).addClass(this.activeLinkClass);
+            this.tabs.removeClass(this.activeTabClass);
+            (0, _jquery2.default)('#' + id).addClass(this.activeTabClass);
+        }
+    }]);
+
+    return TabSwitcher;
+}();
 
 exports.default = TabSwitcher;
 

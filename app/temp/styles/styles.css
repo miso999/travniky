@@ -1480,7 +1480,7 @@ Instead edit gulp/templates/sprite */
 .modal {
   position: fixed;
   z-index: 5;
-  background-color: rgba(255,255,255, .94);
+  background-color: rgba(255,255,255, .98);
   top: 0;
   bottom: 0;
   left: 0;
@@ -1602,24 +1602,45 @@ Instead edit gulp/templates/sprite */
     margin: .25rem 0 1rem 0;
   }
 
-.products {
+.products__description {
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+
+  }
+
+.products__picture {
+    white-space: nowrap;
+  }
+
+.products__picture img {
+      vertical-align: middle;
+    }
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.tabswitcher {
 
   text-align: center;
   margin: 0 auto;
 }
 
-.products__list {
+.tabswitcher__menu {
     border-bottom: 0.1875rem dashed #ccc;
     margin-bottom: 1.875rem;
   }
 
-.products__list li {
+.tabswitcher__menu li {
       display: inline-block;
       list-style-type: none;
       padding: 1.25rem;
     }
 
-.products__list li a {
+.tabswitcher__menu li a {
         color: #555;
         font-size: 1rem;
         font-weight: 400;
@@ -1629,5 +1650,19 @@ Instead edit gulp/templates/sprite */
         letter-spacing: 0.0625rem;
         text-transform: uppercase;
         text-decoration: none;
+        cursor: pointer;
 
       }
+
+.tabswitcher__menu li a.active {
+          background: #06520f;
+          color: #fff;
+        }
+
+.tabswitcher__tab {
+    display: none;
+  }
+
+.tabswitcher__tab--active {
+      display: block;
+    }
