@@ -9919,7 +9919,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mobileMenu = new _MobileMenu2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '80%');
-new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '70%');
+new _RevealOnScroll2.default((0, _jquery2.default)('.service'), '70%');
 var stickyHeader = new _StickyHeader2.default();
 new _Modal2.default();
 new _TabSwticher2.default();

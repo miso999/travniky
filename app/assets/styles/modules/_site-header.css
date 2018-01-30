@@ -6,7 +6,7 @@
   transition: background-color .3s ease-out;
 
   &--expanded {
-    background-color: rgba($mainColor, .9);
+    background-color: rgba($mainColor, .96);
     z-index: 5;
 
   }
@@ -16,7 +16,7 @@
     position: fixed;
 
     &--dark {
-      background-color: rgba($mainColor, .9);
+      background-color: rgba($mainColor, .96);
     }
   }
 

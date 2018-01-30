@@ -460,6 +460,31 @@ hr.left {
     margin-left: 0;
   }
 
+input {
+  width: 100%;
+  height: 1.875rem;
+  border: 0.0625rem solid #ccc;
+  padding: 0 0.3125rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #ccc;
+
+}
+
+button {
+  padding: 0.75rem 1.2rem;
+  background: #06520f;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border:0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 @media (max-width: 48rem) {
 
 .hidden-xs {
@@ -607,6 +632,12 @@ hr.left {
   text-decoration: none;
   padding: .75rem 1.2rem;
   display: inline-block;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  border-radius: 0.25rem;
+  border:0;
+  cursor: pointer;
+  text-transform: uppercase;
 
 }
 
@@ -864,6 +895,11 @@ hr.left {
     .row__medium-8 {
       float: left;
       width: 66.66%;
+    }
+
+    .row__medium-12 {
+      float: left;
+      width: 100%;
     }
 
     .row__medium-8--smaller {
@@ -1210,7 +1246,7 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header--expanded {
-    background-color: rgba(6,82,15, .9);
+    background-color: rgba(6,82,15, .96);
     z-index: 5;
 
   }
@@ -1223,7 +1259,7 @@ Instead edit gulp/templates/sprite */
 }
 
     .site-header--dark {
-      background-color: rgba(6,82,15, .9);
+      background-color: rgba(6,82,15, .96);
     }
   }
 
@@ -1448,6 +1484,8 @@ Instead edit gulp/templates/sprite */
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
     outline: 0;
+    border-radius: 0.25rem;
+    border:0.0625rem solid  #fff;
   }
 
 @media (min-width: 50rem) {
@@ -1455,7 +1493,8 @@ Instead edit gulp/templates/sprite */
 .primary-nav a {
       background-color: transparent;
       padding: 0.75rem 0.75rem;
-      font-size: 1rem
+      font-size: 1rem;
+      border: 0
   }
 
       .primary-nav a.active {
@@ -1465,10 +1504,8 @@ Instead edit gulp/templates/sprite */
 
 .reveal-item {
   opacity: 0;
-  -webkit-transition: all .7s ease-out;
-  transition: all .7s ease-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition: all 1.4s ease-out;
+  transition: all 1.4s ease-out;
 }
 
 .reveal-item--show {
@@ -1616,6 +1653,25 @@ Instead edit gulp/templates/sprite */
 .products__picture img {
       vertical-align: middle;
     }
+
+@media (min-width: 50rem) {
+
+.products__picture img {
+        max-height:12.5rem
+    }
+  }
+
+.products__video iframe {
+      width:34.6875rem;
+      height:19.5rem;
+    }
+
+@media (min-width: 50rem) {
+
+.products__video {
+      margin-top: 1.875rem
+  }
+  }
 
 .helper {
   display: inline-block;

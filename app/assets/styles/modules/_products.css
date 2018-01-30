@@ -12,6 +12,21 @@
 
     & img {
       vertical-align: middle;
+
+      @mixin atMedium {
+        max-height:200px;
+      }
+    }
+  }
+
+  &__video {
+
+    iframe {
+      width:555px;
+      height:312px;
+    }
+    @mixin atMedium {
+      margin-top: 30px;
     }
   }
 }
