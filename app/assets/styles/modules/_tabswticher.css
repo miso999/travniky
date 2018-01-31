@@ -10,20 +10,29 @@
     & li {
       display: inline-block;
       list-style-type: none;
-      padding: 20px;
+      padding: 5px;
+
+      @mixin atMedium {
+        padding: 20px;
+      }
 
       & a {
         color: #555;
         font-size: 16px;
         font-weight: 400;
-        padding: 10px 16px;
+        padding: 5px 10px;
         border: 0;
         border-radius: 3px;
         letter-spacing: 1px;
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        
+        display: block;
+
+        @mixin atMedium {
+          padding: 10px 16px;
+        }
+
 
         &.active {
           background: $mainColor;
