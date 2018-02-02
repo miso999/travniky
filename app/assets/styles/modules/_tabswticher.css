@@ -28,6 +28,7 @@
         text-decoration: none;
         cursor: pointer;
         display: block;
+        border:1px solid $mainColor;
 
         @mixin atMedium {
           padding: 10px 16px;

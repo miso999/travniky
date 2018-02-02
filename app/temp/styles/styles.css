@@ -1129,11 +1129,11 @@ button {
 Instead edit gulp/templates/sprite */
 
 .icon {
-      background-image: url('/temp/sprite/css/sprite-e8f37df9.svg');
+      background-image: url('/assets/images/sprites/sprite-e8f37df9.svg');
     }
 
 .no-svg .icon {
-      background-image: url('/temp/sprite/css/sprite-e8f37df9.png');
+      background-image: url('/assets/images/sprites/sprite-e8f37df9.png');
     }
 
 .icon--clear-view-escapes {
@@ -1715,6 +1715,7 @@ Instead edit gulp/templates/sprite */
         text-decoration: none;
         cursor: pointer;
         display: block;
+        border:0.0625rem solid #06520f;
 
       }
 
